@@ -69,6 +69,28 @@
   .obs p { font-size:12.5px; color:#2c4a43; margin-top:3px; letter-spacing:.4px; }
   .perf { position:absolute; right:14px; top:170px; writing-mode:vertical-rl; font-family:'Courier New',monospace;
           font-size:15px; letter-spacing:6px; color:rgba(138,31,31,.55); font-weight:700; }
+  /* ---------- border stamps ---------- */
+  .stamp { position:absolute; text-transform:uppercase; pointer-events:none; }
+  .stamp-round { right:52px; top:592px; width:158px; height:158px; border:3px solid rgba(43,74,138,.62);
+                 border-radius:50%; color:rgba(43,74,138,.78); transform:rotate(-11deg);
+                 display:flex; flex-direction:column; align-items:center; justify-content:center;
+                 text-align:center; box-shadow:inset 0 0 0 1.5px rgba(43,74,138,.35); }
+  .stamp-round .s-country { font-size:10.5px; font-weight:700; letter-spacing:1.6px; }
+  .stamp-round .s-port { font-size:9px; letter-spacing:2px; margin-top:2px; }
+  .stamp-round .s-kind { font-size:15px; font-weight:700; letter-spacing:3px; margin-top:7px;
+                         border-top:1.5px solid rgba(43,74,138,.55); border-bottom:1.5px solid rgba(43,74,138,.55);
+                         padding:2px 10px; }
+  .stamp-round .s-date { font-size:13px; font-weight:700; letter-spacing:1.5px; margin-top:6px; }
+  .stamp-rect { left:492px; top:662px; width:308px; padding:7px 12px 8px; transform:rotate(4.5deg);
+                border:2.5px solid rgba(122,45,67,.58); border-radius:4px; color:rgba(122,45,67,.8);
+                box-shadow:inset 0 0 0 1px rgba(122,45,67,.3); }
+  .stamp-rect .s-country { font-size:11.5px; font-weight:700; letter-spacing:1.8px; }
+  .stamp-rect .s-line { display:flex; justify-content:space-between; align-items:baseline; margin-top:3px; }
+  .stamp-rect .s-kind { font-size:14px; font-weight:700; letter-spacing:2.5px; }
+  .stamp-rect .s-date { font-size:13px; font-weight:700; letter-spacing:1px; }
+  .visa-strip { left:492px; top:724px; transform:rotate(-1.6deg); padding:4px 10px;
+                border:1.5px solid rgba(122,100,20,.65); color:rgba(101,80,13,.85);
+                font-size:9.5px; font-weight:700; letter-spacing:1.6px; background:rgba(253,243,184,.28); }
   /* ---------- MRZ ---------- */
   .mrz { position:absolute; left:0; right:0; bottom:0; height:118px; padding:20px 46px 0 46px;
          background:linear-gradient(180deg, rgba(255,255,255,.55), rgba(233,238,224,.9));
@@ -270,6 +292,19 @@
   <div class="perf">S04241773 &#183; S04241773</div>
 
   <div class="micro" style="bottom:126px">REPUBLICA DE SALMARIS &#8226; REPUBLIC OF SALMARIS &#8226; REPUBLICA DE SALMARIS &#8226; REPUBLIC OF SALMARIS &#8226; REPUBLICA DE SALMARIS &#8226; REPUBLIC OF SALMARIS &#8226; REPUBLICA DE SALMARIS &#8226; REPUBLIC OF SALMARIS &#8226;</div>
+
+  <!-- border stamps: a Vessia entry and an Ondria departure, Sep 2025 — after issue (Jun 2024), inside validity -->
+  <div class="stamp stamp-round">
+    <div class="s-country">Republica de Vessia</div>
+    <div class="s-port">&#10022; Kestrel Harbour &#10022;</div>
+    <div class="s-kind">Entry</div>
+    <div class="s-date">12 SEP 2025</div>
+  </div>
+  <div class="stamp stamp-rect">
+    <div class="s-country">Kingdom of Ondria &#183; Port Sable</div>
+    <div class="s-line"><span class="s-kind">Departed</span><span class="s-date">19 SEP 2025</span></div>
+  </div>
+  <div class="stamp visa-strip">Vesper Sea Transit &#183; Ferry Passengers Only &#183; 30 Days</div>
 
   <!-- machine readable zone -->
   <div class="mrz">

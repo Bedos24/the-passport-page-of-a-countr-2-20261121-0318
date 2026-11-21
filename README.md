@@ -12,6 +12,14 @@ The page is one self-contained HTML file (`index.html`, no external assets) buil
 
 ## Run it
 
+The entry program is `main.py` (Python 3, standard library only): it writes the passport image to `/output/entry.png`, downscaling with a built-in PNG codec if the source ever exceeds the 1024×1024 px / 1 MiB gate caps.
+
+```sh
+python3 main.py        # writes /output/entry.png
+```
+
+To view the page itself:
+
 ```sh
 python3 -m http.server 8000
 # then open http://localhost:8000 in a browser — or just open index.html directly
